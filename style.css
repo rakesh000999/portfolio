@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+nav a {
+    color: rgb(183, 183, 183);
+
+    &:hover {
+        color: white;
+    }
+}
+
+nav {
+    padding: 0px 7%;
+}
+
+div.logo {
+    float: left;
+    padding: 15px;
+    font-size: 30px;
+}
+
+div.navigation {
+    float: right;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    padding: 15px;
+    font-size: 25px;
+}
+
+div.social-links {
+    float: right;
+}
+
+/* Main */
+
+main {
+    clear: both;
+    margin: 40px;
+    padding: 30px 7%;
+
+    & div.hero {
+        display: flex;
+        padding: 20px 0;
+        border-bottom: 2px solid rgb(229, 218, 218);
+
+
+        font-size: 40px;
+
+        & p {
+            margin-top: 40px;
+        }
+
+        & div.profile-image img {
+
+            height: 500px;
+            width: auto;
+            border-radius: 20px;
+            float: right;
+            margin: 0px 90px;
+        }
+    }
+
+    & div.expertise {
+        font-size: 40px;
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px;
+        border-bottom: 2px solid rgb(229, 218, 218);
+    }
+
+    & div.work-activities-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        padding: 20px 0;
+        border-bottom: 2px solid rgb(229, 218, 218);
+
+
+        h1 {
+            display: block;
+        }
+
+        & .work {
+
+            & img {
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 20px;
+                transition: all linear 0.5s;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+
+}
+
+/* Footer */
+
+footer {
+    margin: 40px;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: center;
+
+    & div {
+        & h1 {
+            font-size: 60px;
+            font-weight: 200;
+        }
+
+        & button {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-left: 38%;
+            color: black;
+            font-weight: 550;
+            padding: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+
+            & a {
+                color: black;
+            }
+        }
+    }
+}
