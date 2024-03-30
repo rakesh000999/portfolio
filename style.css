@@ -7,7 +7,7 @@
 
 body {
     background-color: rgb(0, 0, 0);
-    font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 a {
@@ -169,5 +169,63 @@ footer {
             }
 
         }
+    }
+}
+
+/* Infinite Rolling Animation */
+
+:root {
+    --bgColor: #18253a;
+    --tagColor: #2e2e32;
+    --txtColor: #eeeeee;
+    --gap: 1rem;
+}
+
+.wrapper {
+    margin: 1rem auto;
+    display: flex;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: black;
+    color: var(--txtColor);
+    font-family: "Poopins", sans-serif;
+    width: fit-content;
+    gap: var(--gap);
+
+    animation: roll 5s linear infinite;
+}
+
+.tag {
+    padding: 0.8rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.4rem;
+    background-color: var(--tagColor);
+    font-weight: 600;
+}
+
+.blur {
+    position: absolute;
+    background: linear-gradient(90deg,
+            black,
+            transparent 20%,
+            transparent 80%,
+            black);
+    inset: 0;
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(10);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - var(--gap)/2));
     }
 }
